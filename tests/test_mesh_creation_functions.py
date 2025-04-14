@@ -46,7 +46,7 @@ from meshpy.mesh_creation_functions.beam_basic_geometry import (
     create_beam_mesh_line_at_node,
 )
 from meshpy.mesh_creation_functions.beam_curve import create_beam_mesh_curve
-from meshpy.mesh_creation_functions.beam_fibers_in_rectangle import (
+from meshpy.mesh_creation_functions.applications.beam_fibers_in_rectangle import (
     create_fibers_in_rectangle,
 )
 from meshpy.mesh_creation_functions.beam_generic import create_beam_mesh_function
@@ -54,8 +54,8 @@ from meshpy.mesh_creation_functions.beam_nurbs import (
     create_beam_mesh_from_nurbs,
     get_nurbs_curve_function_and_jacobian_for_integration,
 )
-from meshpy.mesh_creation_functions.beam_stent import create_beam_mesh_stent
-from meshpy.mesh_creation_functions.beam_wire import create_wire_fibers
+from meshpy.mesh_creation_functions.applications.beam_stent import create_beam_mesh_stent
+from meshpy.mesh_creation_functions.applications.beam_wire import create_wire_fibers
 from meshpy.utils.nodes import get_nodal_coordinates
 
 

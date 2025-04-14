@@ -19,39 +19,7 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
-"""DEPRECATED: Use `beam_line` and `beam_arc` instead.
+"""This module contains application-oriented beam mesh generation functions.
 
-This file will be removed in a future release.
+Includes stent structures, wire meshes, honeycomb patterns, and fiber distributions.
 """
-
-import warnings as _warnings
-
-_warnings.warn(
-    "beam_basic_geometry.py is deprecated and will be removed in a future release. "
-    "Please use beam_line.py and beam_arc.py instead.",
-    DeprecationWarning,
-    stacklevel=2,
-)
-
-from .beam_line import create_beam_mesh_line, create_beam_mesh_line_at_node
-from .beam_arc import (
-    create_beam_mesh_arc_segment_via_rotation,
-    create_beam_mesh_arc_segment_via_axis,
-    create_beam_mesh_arc_segment_2d,
-    create_beam_mesh_arc_at_node,
-)
-from .beam_helix import create_beam_mesh_helix
-
-__all__ = [
-    "create_beam_mesh_line",
-    "create_beam_mesh_line_at_node",
-    "create_beam_mesh_arc_segment_via_rotation",
-    "create_beam_mesh_arc_segment_via_axis",
-    "create_beam_mesh_arc_segment_2d",
-    "create_beam_mesh_arc_at_node",
-    "create_beam_mesh_helix"
-]
-
-
-
-

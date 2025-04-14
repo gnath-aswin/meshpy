@@ -66,7 +66,7 @@ from meshpy.mesh_creation_functions.beam_basic_geometry import (
     create_beam_mesh_line,
 )
 from meshpy.mesh_creation_functions.beam_curve import create_beam_mesh_curve
-from meshpy.mesh_creation_functions.beam_honeycomb import create_beam_mesh_honeycomb
+from meshpy.mesh_creation_functions.applications.beam_honeycomb import create_beam_mesh_honeycomb
 from meshpy.utils.nodes import (
     get_min_max_coordinates,
     get_single_node,
