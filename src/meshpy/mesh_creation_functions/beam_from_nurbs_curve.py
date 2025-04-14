@@ -24,7 +24,7 @@
 import numpy as _np
 
 from meshpy.core.conf import mpy as _mpy
-from meshpy.mesh_creation_functions.beam_curve import (
+from meshpy.mesh_creation_functions.beam_parametric_curve import (
     create_beam_mesh_curve as _create_beam_mesh_curve,
 )
 

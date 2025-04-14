@@ -19,7 +19,7 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
-"""DEPRECATED: Use `beam_line` and `beam_arc` instead.
+"""DEPRECATED: Use `beam_line`, `beam_arc`, and `beam_helix` instead.
 
 This file will be removed in a future release.
 """
@@ -27,20 +27,31 @@ This file will be removed in a future release.
 import warnings as _warnings
 
 _warnings.warn(
-    "beam_basic_geometry.py is deprecated and will be removed in a future release. "
-    "Please use beam_line.py and beam_arc.py instead.",
+    "beam_basic_geometry is deprecated and will be removed in a future release. "
+    "Please use beam_line, beam_arc, and beam_helix instead.",
     DeprecationWarning,
     stacklevel=2,
 )
 
-from .beam_line import create_beam_mesh_line, create_beam_mesh_line_at_node
 from .beam_arc import (
-    create_beam_mesh_arc_segment_via_rotation,
-    create_beam_mesh_arc_segment_via_axis,
-    create_beam_mesh_arc_segment_2d,
-    create_beam_mesh_arc_at_node,
+    create_beam_mesh_arc_at_node as _create_beam_mesh_arc_at_node,
 )
-from .beam_helix import create_beam_mesh_helix
+from .beam_arc import (
+    create_beam_mesh_arc_segment_2d as _create_beam_mesh_arc_segment_2d,
+)
+from .beam_arc import (
+    create_beam_mesh_arc_segment_via_axis as _create_beam_mesh_arc_segment_via_axis,
+)
+from .beam_arc import (
+    create_beam_mesh_arc_segment_via_rotation as _create_beam_mesh_arc_segment_via_rotation,
+)
+from .beam_helix import create_beam_mesh_helix as _create_beam_mesh_helix
+from .beam_line import (
+    create_beam_mesh_line as _create_beam_mesh_line,
+)
+from .beam_line import (
+    create_beam_mesh_line_at_node as _create_beam_mesh_line_at_node,
+)
 
 __all__ = [
     "create_beam_mesh_line",
@@ -49,9 +60,14 @@ __all__ = [
     "create_beam_mesh_arc_segment_via_axis",
     "create_beam_mesh_arc_segment_2d",
     "create_beam_mesh_arc_at_node",
-    "create_beam_mesh_helix"
+    "create_beam_mesh_helix",
 ]
 
-
-
-
+# Re-export under original names
+create_beam_mesh_line = _create_beam_mesh_line
+create_beam_mesh_line_at_node = _create_beam_mesh_line_at_node
+create_beam_mesh_arc_segment_via_rotation = _create_beam_mesh_arc_segment_via_rotation
+create_beam_mesh_arc_segment_via_axis = _create_beam_mesh_arc_segment_via_axis
+create_beam_mesh_arc_segment_2d = _create_beam_mesh_arc_segment_2d
+create_beam_mesh_arc_at_node = _create_beam_mesh_arc_at_node
+create_beam_mesh_helix = _create_beam_mesh_helix

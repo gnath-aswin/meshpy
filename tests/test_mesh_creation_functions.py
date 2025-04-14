@@ -36,6 +36,13 @@ from meshpy.core.rotation import Rotation
 from meshpy.four_c.element_beam import Beam3eb, Beam3rHerm2Line3
 from meshpy.four_c.input_file import InputFile
 from meshpy.four_c.material import MaterialEulerBernoulli, MaterialReissner
+from meshpy.mesh_creation_functions.applications.beam_fibers_in_rectangle import (
+    create_fibers_in_rectangle,
+)
+from meshpy.mesh_creation_functions.applications.beam_stent import (
+    create_beam_mesh_stent,
+)
+from meshpy.mesh_creation_functions.applications.beam_wire import create_wire_fibers
 from meshpy.mesh_creation_functions.beam_basic_geometry import (
     create_beam_mesh_arc_at_node,
     create_beam_mesh_arc_segment_2d,
@@ -45,17 +52,12 @@ from meshpy.mesh_creation_functions.beam_basic_geometry import (
     create_beam_mesh_line,
     create_beam_mesh_line_at_node,
 )
-from meshpy.mesh_creation_functions.beam_curve import create_beam_mesh_curve
-from meshpy.mesh_creation_functions.applications.beam_fibers_in_rectangle import (
-    create_fibers_in_rectangle,
-)
-from meshpy.mesh_creation_functions.beam_generic import create_beam_mesh_function
-from meshpy.mesh_creation_functions.beam_nurbs import (
+from meshpy.mesh_creation_functions.beam_from_nurbs_curve import (
     create_beam_mesh_from_nurbs,
     get_nurbs_curve_function_and_jacobian_for_integration,
 )
-from meshpy.mesh_creation_functions.applications.beam_stent import create_beam_mesh_stent
-from meshpy.mesh_creation_functions.applications.beam_wire import create_wire_fibers
+from meshpy.mesh_creation_functions.beam_generic import create_beam_mesh_function
+from meshpy.mesh_creation_functions.beam_parametric_curve import create_beam_mesh_curve
 from meshpy.utils.nodes import get_nodal_coordinates
 
 

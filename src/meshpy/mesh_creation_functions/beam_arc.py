@@ -19,9 +19,7 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
-"""Functions to create beam meshes along arcs.
-"""
-
+"""Functions to create beam meshes along arcs."""
 
 import warnings as _warnings
 
@@ -34,6 +32,7 @@ from meshpy.mesh_creation_functions.beam_generic import (
     create_beam_mesh_function as _create_beam_mesh_function,
 )
 from meshpy.utils.nodes import get_single_node as _get_single_node
+
 
 def create_beam_mesh_arc_segment_via_rotation(
     mesh, beam_class, material, center, axis_rotation, radius, angle, **kwargs
@@ -260,9 +259,6 @@ def create_beam_mesh_arc_segment_2d(
         _np.abs(angle),
         **kwargs,
     )
-
-
-
 
 
 def create_beam_mesh_arc_at_node(

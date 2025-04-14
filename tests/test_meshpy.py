@@ -61,12 +61,14 @@ from meshpy.four_c.material import (
     MaterialReissnerElastoplastic,
     MaterialStVenantKirchhoff,
 )
-from meshpy.mesh_creation_functions.beam_basic_geometry import (
-    create_beam_mesh_arc_segment_via_rotation,
-    create_beam_mesh_line,
+from meshpy.mesh_creation_functions.applications.beam_honeycomb import (
+    create_beam_mesh_honeycomb,
 )
-from meshpy.mesh_creation_functions.beam_curve import create_beam_mesh_curve
-from meshpy.mesh_creation_functions.applications.beam_honeycomb import create_beam_mesh_honeycomb
+from meshpy.mesh_creation_functions.beam_arc import (
+    create_beam_mesh_arc_segment_via_rotation,
+)
+from meshpy.mesh_creation_functions.beam_line import create_beam_mesh_line
+from meshpy.mesh_creation_functions.beam_parametric_curve import create_beam_mesh_curve
 from meshpy.utils.nodes import (
     get_min_max_coordinates,
     get_single_node,

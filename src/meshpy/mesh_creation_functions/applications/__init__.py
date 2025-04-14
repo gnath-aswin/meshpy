@@ -21,5 +21,6 @@
 # THE SOFTWARE.
 """This module contains application-oriented beam mesh generation functions.
 
-Includes stent structures, wire meshes, honeycomb patterns, and fiber distributions.
+Includes stent structures, wire meshes, honeycomb patterns, and fiber
+distributions.
 """

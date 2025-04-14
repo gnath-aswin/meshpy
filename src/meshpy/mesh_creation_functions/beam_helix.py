@@ -19,9 +19,7 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
-"""Functions to create beam meshes along straight lines.
-"""
-
+"""Functions to create beam meshes along straight lines."""
 
 import warnings as _warnings
 
@@ -34,7 +32,9 @@ from meshpy.mesh_creation_functions.beam_generic import (
     create_beam_mesh_function as _create_beam_mesh_function,
 )
 from meshpy.utils.nodes import get_single_node as _get_single_node
-from .beam_line import create_beam_mesh_line
+
+from .beam_line import create_beam_mesh_line as _create_beam_mesh_line
+
 
 def create_beam_mesh_helix(
     mesh,
@@ -157,7 +157,7 @@ def create_beam_mesh_helix(
         elif height_helix is not None and turns is not None:
             end_point = start_point + height_helix * axis_vector
 
-        line_sets = create_beam_mesh_line(
+        line_sets = _create_beam_mesh_line(
             mesh_temp,
             beam_class,
             material,
@@ -202,7 +202,7 @@ def create_beam_mesh_helix(
             ]
         )
 
-    helix_sets = create_beam_mesh_line(
+    helix_sets = _create_beam_mesh_line(
         mesh_temp,
         beam_class,
         material,
